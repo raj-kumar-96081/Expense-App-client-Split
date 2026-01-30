@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import AppLayout from "./components/AppLayout";
 import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
+import Logout from "./pages/Logout";
+import UserLayout from "./components/UserLayout";
 
 function App() {
     // Value of userDetails represents whether the user
@@ -37,11 +39,24 @@ function App() {
                 }
             />
 
-            <Route 
+            <Route
                 path="/dashboard"
                 element={
                     userDetails ? (
-                        <Dashboard user={userDetails} />
+                        <UserLayout>
+                            <Dashboard user={userDetails} />
+                        </UserLayout>
+                    ) : (
+                        <Navigate to="/login" />
+                    )
+                }
+            />
+
+            <Route
+                path="/logout"
+                element={
+                    userDetails ? (
+                        <Logout setUser={setUserDetails} />
                     ) : (
                         <Navigate to="/login" />
                     )
