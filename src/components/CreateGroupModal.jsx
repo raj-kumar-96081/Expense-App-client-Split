@@ -68,6 +68,7 @@ function CreateGroupModal({ show, onHide, onSuccess }) {
                         date: new Date().toISOString(),
                         isPaid: false,
                     },
+                    
                 });
 
                 setFormData({ name: "", description: "" });
