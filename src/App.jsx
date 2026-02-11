@@ -97,7 +97,7 @@ function App() {
             />
 
             <Route
-                path="/groups/:groupId"
+                path="/groups/:groupId/expenses"
                 element={
                     userDetails ? (
                         <UserLayout>

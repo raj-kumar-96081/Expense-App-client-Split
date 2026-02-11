@@ -1,13 +1,24 @@
-import axios from "../utils/axios";
+import axios from "axios";
+import { serverEndpoint } from "../config/appConfig";
 
 export const getGroupExpenses = (groupId) =>
-    axios.get(`/expenses/group/${groupId}`);
+    axios.get(`${serverEndpoint}/api/expenses/group/${groupId}`, {
+        withCredentials: true,
+    });
 
 export const addExpense = (data) =>
-    axios.post("/expenses", data);
+    axios.post(`${serverEndpoint}/api/expenses`, data, {
+        withCredentials: true,
+    });
 
 export const getGroupSummary = (groupId) =>
-    axios.get(`/expenses/group/${groupId}/summary`);
+    axios.get(`${serverEndpoint}/api/expenses/group/${groupId}/summary`, {
+        withCredentials: true,
+    });
 
 export const settleGroup = (groupId) =>
-    axios.post(`/expenses/group/${groupId}/settle`);
+    axios.post(
+        `${serverEndpoint}/api/expenses/group/${groupId}/settle`,
+        {},
+        { withCredentials: true }
+    );

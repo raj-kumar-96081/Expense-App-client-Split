@@ -62,7 +62,7 @@ function GroupCard({ group, onUpdate }) {
                 </p>
 
                 <Link
-                    to={`/groups/${group._id}`}
+                    to={`/groups/${group._id}/expenses`}
                     className="btn btn-outline-primary btn-sm rounded-pill fw-bold mb-4 w-100 py-2"
                 >
                     View & Add Expenses

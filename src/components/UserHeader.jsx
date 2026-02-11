@@ -34,7 +34,7 @@ function UserHeader() {
                 <div className="collapse navbar-collapse" id="userNavbar">
                     {/* Primary App Navigation */}
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        {/* <li className="nav-item">
+                        <li className="nav-item">
                             <Link
                                 className={`nav-link px-3 ${isActive(
                                     "/dashboard"
@@ -44,7 +44,7 @@ function UserHeader() {
                                 <i className="bi bi-speedometer2 me-1"></i>{" "}
                                 Groups
                             </Link>
-                        </li> */}
+                        </li>
                     </ul>
 
                     {/* User Profile Dropdown */}
